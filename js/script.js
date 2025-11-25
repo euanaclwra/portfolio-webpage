@@ -1,5 +1,6 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {showNavBar()};
 const links = document.querySelectorAll('a[href^="#"]');
+const menu = document.getElementById("main-menu");
 
 links.forEach(link => {
     link.addEventListener('click', e => {
@@ -13,13 +14,25 @@ links.forEach(link => {
             top: offsetTop,
             behavior: 'smooth'
         });
+
+        hideMenu()
     });
 });
 
-function scrollFunction() {
+function showNavBar() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-50px";
   }
+}
+
+function showMenu() {
+    menu.classList.toggle("collapsed");  
+    document.getElementById("burger-icon").classList.toggle("active");
+};
+
+function hideMenu() {
+    menu.classList.remove("collapsed"); 
+    document.getElementById("burger-icon").classList.remove("active");    
 }

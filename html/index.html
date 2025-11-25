@@ -13,7 +13,7 @@
 <body>
     <header class="flex-container">
         <nav id="navbar">
-            <ul class="main-menu flex-container">
+            <ul class="main-menu flex-container" id="main-menu">
                 <li>
                     <a href="#hero" class="menu-item">Home</a>                                        
                 </li>
@@ -29,8 +29,12 @@
             </ul>
         </nav>
 
-        <button class="burger-menu-btn">
-            <img src="/img/burger-bar.png" alt="Burger Menu Icon" width="50">
+        <button class="burger-menu-btn" id="burger-menu-btn" onclick="showMenu()">
+            <svg height="40" width="40" xmlns="http://www.w3.org/2000/svg" id="burger-icon">
+                <line x1="0" y1="10" x2="40" y2="10" class="line1"/>
+                <line x1="0" y1="20" x2="40" y2="20" class="line2"/>
+                <line x1="0" y1="30" x2="40" y2="30" class="line3"/>
+            </svg>               
         </button>
     </header>
 

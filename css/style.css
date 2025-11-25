@@ -261,20 +261,48 @@ line {
     opacity: 0;
   }
 
+  /* Menu Hambúrguer */
   .burger-menu-btn {
     display: block;
     align-self: flex-end;
+    top: 10px;
+    right: 15px;
+    position: absolute;
   }
 
-  /* Menu Hambúrguer */
+  line {
+    transition: all 0.3s ease-in-out;
+    transform-box: fill-box;
+    transform-origin: center;    
+  }
+
+  #burger-icon.active .line1 {
+    transform: translateY(10px) rotate(45deg);
+    stroke: #C82E9D;
+  }
+
+  #burger-icon.active .line2 {
+    opacity: 0;
+  }
+
+  #burger-icon.active .line3 {
+    transform: translateY(-10px) rotate(-45deg);
+    stroke: #C82E9D;
+  }
+
   .main-menu {
-    display: none;
     position: absolute;
+    top: -1000px;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #f2f2f2;
     color: #5C147C;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main-menu.collapsed {
+    top: 0;
   }
 
   .main-menu li {
@@ -286,4 +314,8 @@ line {
   .menu-item {
     color: #C82E9D;
   }
+
+  .menu-item:hover::after {
+  transform: scaleX(0)
+}
 }
