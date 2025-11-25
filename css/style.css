@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+    font-family: "Montserrat";
+    color: white;    
+    background: #000021;
+    background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+}
+
+main section {
+  padding: 2rem;
+  min-height: 100vh;
+  height: auto;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.gradient-title {
+  background: #5C147C;
+  background: linear-gradient(to top right, #5C147C 35%, #C82E9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 1.3rem;
+}
+
+.main-menu a {
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: white;   
+}
+
+.menu-item::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 0.7rem;
+  background-color: #780DA6;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover::after {
+  transform: scaleX(1)
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.hero-child {
+  display: inline-block;
+  text-align: left;  
+}
+
+.hero-child h1, .hero-child h2 {
+  font-size: 4rem;
+}
+
+.hero-child img {
+  width: 70vh;
+}
+
+.hero-child h2 {
+  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
+}
+
+.github-btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
+}
+
+.github-btn a {
+  color: white;
+  text-decoration: none;
+  background-color: #03032c;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  display: block;
+  transition: background-color 0.1s ease-in;
+}
+
+.github-btn a:hover {
+  background-color: transparent;
+}
+
+.about {
+  background: #02022B;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.about .flex-container {  
+  justify-content: center;
+  align-items: center;
+}
+
+.about-child {
+  flex: 0 0 50%;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.about-image img {
+  width: 60vh;
+}
+
+.about-table {
+  border: solid #40106a 1px;
+  padding: 0.7rem;
+  width: auto;
+  font-size: 0.9rem;
+}
+
+.about .grid-container {  
+  border: solid #40106a 1px;
+  border-radius: 0.5rem;
+  font-size: 0.9rem; 
+  display: grid;  
+  grid-gap: 0.3rem;
+  padding: 0.7rem;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.image-container {
+  background: linear-gradient(228deg,rgba(201, 47, 156, 1) 0%, rgba(93, 0, 113, 1) 100%);
+  border-radius: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: fit-content;
+}
+
+.skills .flex-container {
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.skill-item {
+  border: solid rgba(162, 31, 171, 0.3) 1px;
+  border-radius: 0.5rem; 
+  width: auto; 
+  height: auto;
+  padding: 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.skill-item img {
+  width: 25%;
+  max-width: 200px;
+  height: auto;
+}
+
+.skill-item h3 {
+  margin: 1rem;
+}
+
+.contact {
+  background: #02022B;
+}
+
+.contact-box {
+  gap: 2rem;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.contact img {
+  width: 45%;
+  max-width: 120px;
+}
+
+.contact h4 {
+  text-transform: uppercase;
+}
+
+.contact-item {
+  align-items: center;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: white;  
+  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {  
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .hero-child img {
+    opacity: 0;
+  }
+}
