@@ -15,6 +15,18 @@ body {
     background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
 }
 
+h1 {
+  font-size: 0.7rem;
+  display: inline-block;  
+  white-space: nowrap; 
+  padding: 0.5rem;
+  border-right: .05em solid #C82E9D;
+  overflow: hidden;
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}  
+
 #navbar {
   width: 100%;
   position: fixed;
@@ -26,6 +38,10 @@ body {
 
 #navbar.active {
   transform: translate(0);
+}
+
+.monospaced {
+  font-family: monospace;
 }
 
 .burger-menu-btn {
@@ -96,7 +112,7 @@ h2 {
 }
 
 .hero-child h1, .hero-child h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 
 .hero-child img {
@@ -108,6 +124,7 @@ h2 {
 }
 
 .github-btn {
+  font-size: 2em;
   display: inline-block;
   text-align: center;
   border-radius: 0.5rem;
@@ -248,6 +265,17 @@ h2 {
 line {
   stroke: white;
   stroke-width: 1px;
+}
+
+/* Animações */
+@keyframes typing {
+  from {width: 0}
+  to {width: 14ch}
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent}
+  50% {border-color: #C82E9D;}
 }
 
 /* Responsividade */

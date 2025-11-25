@@ -47,7 +47,7 @@ function showNavBar() {
 // ======== MOBILE ======== //
 function showMenu() {
     // Ativa o menu e troca o ícone
-    menu.classList.toggle("collapsed");  sdf
+    menu.classList.toggle("collapsed");
     document.getElementById("burger-icon").classList.toggle("active");
 };
 
