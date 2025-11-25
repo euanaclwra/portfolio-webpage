@@ -44,6 +44,24 @@ function showNavBar() {
     navbar.classList.toggle("active", window.pageYOffset > 10);
 }
 
+function slideToggle(item) {
+  const container = item.parentElement;
+
+  // remove active de todos
+  container.querySelectorAll(".toggle-item").forEach(el => el.classList.remove("active"));
+  
+  // adiciona active no clicado
+  item.classList.add("active");
+
+  // move o slider
+  if (item === container.children[1]) {
+    container.classList.add("right");
+  } else {
+    container.classList.remove("right");
+  }
+}
+
+
 // ======== MOBILE ======== //
 function showMenu() {
     // Ativa o menu e troca o ícone

@@ -50,6 +50,50 @@ h1 {
   display: none;
 }
 
+.toggle-btn {
+  gap: 0.3rem;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  border-radius: 7px;
+  border: solid #3d1068 2px;
+  position: relative;
+  display: flex;
+  width: 10rem;
+}
+
+.toggle-btn::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  width: calc(50% - 0.3rem);
+  height: calc(100% - 0.6rem);
+  background: white;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+
+.toggle-btn.right::before {
+  transform: translateX(100%);
+}
+
+.toggle-item {
+  padding: 0.3rem;
+  cursor: pointer;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  color: white; 
+  white-space: nowrap; 
+}
+
+.toggle-item.active {
+  background-color: white;
+  border-radius: 3px;
+  color: #3d1068;
+}
+
 main section {
   padding: 2rem;
   min-height: 100vh;
