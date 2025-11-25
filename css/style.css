@@ -16,9 +16,23 @@ body {
 }
 
 header {
+  justify-content: center;
   position: sticky;
   top: 0;
+}
+
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: -50px;
+  transition: top 0.2s;
   background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+}
+
+.burger-menu-btn {
+  background-color: transparent;
+  border: none;
+  display: none;
 }
 
 main section {
@@ -45,13 +59,12 @@ h2 {
 
 .main-menu {
   list-style: none;
-  display: flex;
   gap: 2rem;
   justify-content: center;
   padding-top: 1.3rem;
 }
 
-.main-menu a {
+.menu-item {
     text-decoration: none;
     text-transform: uppercase; 
     color: white;   
@@ -62,7 +75,6 @@ h2 {
   width: 100%;
   height: 1px;
   display: inline-block;
-  background-color: white;
   margin-bottom: 0.7rem;
   background-color: #780DA6;
   transform: scaleX(0);
@@ -234,6 +246,11 @@ h2 {
   margin-right: 1rem;
 }
 
+line {
+  stroke: white;
+  stroke-width: 1px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {  
   .flex-container {
@@ -242,5 +259,31 @@ h2 {
 
   .hero-child img {
     opacity: 0;
+  }
+
+  .burger-menu-btn {
+    display: block;
+    align-self: flex-end;
+  }
+
+  /* Menu Hambúrguer */
+  .main-menu {
+    display: none;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f2f2f2;
+    color: #5C147C;
+    text-align: center;
+  }
+
+  .main-menu li {
+    border-bottom: solid gainsboro 1px;
+    width: 90%;
+    align-self: center;
+  }
+
+  .menu-item {
+    color: #C82E9D;
   }
 }

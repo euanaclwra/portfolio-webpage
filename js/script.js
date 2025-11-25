@@ -1,3 +1,4 @@
+window.onscroll = function() {scrollFunction()};
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach(link => {
@@ -14,3 +15,11 @@ links.forEach(link => {
         });
     });
 });
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
