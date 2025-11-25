@@ -15,18 +15,17 @@ body {
     background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
 }
 
-header {
-  justify-content: center;
-  position: sticky;
-  top: 0;
-}
-
 #navbar {
   width: 100%;
   position: fixed;
-  top: -50px;
-  transition: top 0.2s;
-  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  background-color: rgba(0, 0, 33, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#navbar.active {
+  transform: translate(0);
 }
 
 .burger-menu-btn {
@@ -296,7 +295,6 @@ line {
     min-height: 100vh;
     min-width: 100vw;
     background-color: #f2f2f2;
-    color: #5C147C;
     text-align: center;
     transition: all 0.3s ease-in-out;
   }
