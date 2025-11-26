@@ -45,11 +45,14 @@ h1 {
 
 .scroll {
   width: 5px;
-  height: 100px;
-  margin: 5px;
-  background-color: var(--pink);
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   right: 0;
+  margin: 10px;
+  transform-origin: top; 
+  transform: scaleY(0);   
+  transition: transform 150ms linear; 
+  background-color: var(--pink);
 }
 
 .text-bold {

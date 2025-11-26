@@ -3,12 +3,27 @@ const menu = document.getElementById("main-menu");
 // Mostra a barra de navegação ao rolar a tela
 window.onscroll = function() {
     showNavBar()
+    resizeScrollBar();
 };
 
 // Adiciona scroll suave assim que a página carrega
 window.onload = function () {
     setLinkAnimation()
 };
+
+function resizeScrollBar() {
+  const scroll = document.getElementById("scroll");
+
+  // Obtém a posição atual do scroll
+  const scrollTop = window.pageYOffset;
+  // Calcula a altura disponível da janela
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  // Calcula o progresso do scroll em porcentagem
+  const progress = docHeight > 0 ? (scrollTop / docHeight) : 0; 
+
+  // Aumenta o tamanho conforme o progresso
+  scroll.style.transform = `scaleY(${progress})`;
+}
 
 function setLinkAnimation() {
     // Seleciona todos os links da página
