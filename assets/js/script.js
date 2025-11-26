@@ -44,21 +44,28 @@ function showNavBar() {
     navbar.classList.toggle("active", window.pageYOffset > 10);
 }
 
-function slideToggle(item) {
-  const container = item.parentElement;
+function slideToggle(option) {
+  const container = option.parentElement;
 
-  // remove active de todos
+  // Desativa a outra opção
   container.querySelectorAll(".toggle-item").forEach(el => el.classList.remove("active"));
   
-  // adiciona active no clicado
-  item.classList.add("active");
+  // Ativa a opção selecionada
+  option.classList.toggle("active");
 
-  // move o slider
-  if (item === container.children[1]) {
+  // Move o slider
+  if (option === container.children[1]) {
     container.classList.add("right");
   } else {
     container.classList.remove("right");
   }
+}
+
+function activateLink(menuItem) {
+    // Desativa os demais links
+    document.querySelectorAll(".menu-item").forEach(el => el.classList.remove("active"));
+    // Ativa o link selecionado
+    menuItem.classList.add("active");   
 }
 
 

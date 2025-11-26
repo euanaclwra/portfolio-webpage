@@ -47,7 +47,7 @@ async function setLanguage(lang) {
     });
 }
 
-// Inicializa o idioma
+// Inicializa o idioma como inglês
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage('pt');
 });

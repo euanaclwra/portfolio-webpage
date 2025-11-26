@@ -1,18 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+:root {
+  --pink: #C82E9D;
+  --purple-gradient: linear-gradient(to right, #C82E9D 20%, #92218c 100%);
+}
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
 }
 
 body {
     font-family: "Montserrat";
-    color: white;    
-    background: #000021;
-    background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
+    color: #2b2b2b;    
+    background: #FFFFFF;
 }
 
 header {
@@ -24,7 +33,7 @@ h1 {
   display: inline-block;  
   white-space: nowrap; 
   padding: 0.5rem;
-  border-right: .05em solid #C82E9D;
+  border-right: .05em solid #9e2490;
   overflow: hidden;
   animation: 
     typing 2.5s steps(40, end),
@@ -38,15 +47,15 @@ h1 {
 #navbar {
   width: 70%;
   position: fixed;
-  transform: translateY(-100%);
-  transition: transform 0.2s;
-  background-color: rgba(0, 0, 33, 0.2);
-  backdrop-filter: blur(10px);
+  top: 20px;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
 }
 
 #navbar.active {
-  transform: translate(0);
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.1);  
 }
 
 .monospaced {
@@ -64,7 +73,7 @@ h1 {
   padding: 0.3rem;
   margin: 0.5rem;
   border-radius: 7px;
-  border: solid #3d1068 2px;
+  border: solid var(--pink) 2px;
   position: relative;
   display: flex;
   width: 10rem;
@@ -78,7 +87,7 @@ h1 {
   left: 0.3rem;
   width: calc(50% - 0.3rem);
   height: calc(100% - 0.6rem);
-  background: white;
+  background: var(--pink);
   border-radius: 3px;
   transition: all 0.2s ease;
   z-index: 0;
@@ -94,14 +103,14 @@ h1 {
   z-index: 1;
   flex: 1;
   text-align: center;
-  color: white; 
+  color: var(--pink);
   white-space: nowrap; 
 }
 
 .toggle-item.active {
-  background-color: white;
+  background-color: var(--pink);
   border-radius: 3px;
-  color: #3d1068;
+  color: white;
 }
 
 main section {
@@ -120,9 +129,8 @@ h2 {
 }
 
 .gradient-title {
-  background: #5C147C;
-  background: linear-gradient(to top right, #5C147C 35%, #C82E9D 100%);
-  -webkit-background-clip: text;
+  background: var(--purple-gradient);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -134,9 +142,18 @@ h2 {
 }
 
 .menu-item {
-    text-decoration: none;
-    text-transform: uppercase; 
-    color: white;   
+  text-transform: uppercase; 
+}
+
+.menu-item.active::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  background-color: var(--pink);
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
 }
 
 .menu-item::after {
@@ -145,7 +162,7 @@ h2 {
   height: 1px;
   display: inline-block;
   margin-bottom: 0.7rem;
-  background-color: #780DA6;
+  background-color: var(--pink);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -174,31 +191,37 @@ h2 {
 }
 
 .hero-child h2 {
-  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
-  max
+  color: #551378;
 }
 
 .github-btn {
   font-size: 2em;
-  display: inline-block;
   text-align: center;
-  border-radius: 0.5rem;
-  padding: 0.2rem;
-  background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
+  padding: 1rem;
+  display: inline-flex;
+  border: solid var(--pink) 2px;  
+  cursor: pointer;
 }
 
 .github-btn a {
-  color: white;
-  text-decoration: none;
-  background-color: #03032c;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  display: block;
-  transition: background-color 0.1s ease-in;
+  color: var(--pink);
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;  
 }
 
-.github-btn a:hover {
-  background-color: transparent;
+.github-btn a::after {
+  content: ">";
+  max-width: 0;  
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover a::after {
+  max-width: 20px;
+  opacity: 1;
+  margin-left: 10px;
 }
 
 .about {
@@ -331,6 +354,24 @@ line {
 @keyframes blink-caret {
   from, to {border-color: transparent}
   50% {border-color: #C82E9D;}
+}
+
+@keyframes gradient-moving {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Responsividade */
