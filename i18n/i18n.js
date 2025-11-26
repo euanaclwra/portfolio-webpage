@@ -45,13 +45,9 @@ async function setLanguage(lang) {
             console.error(`Chave de tradução não encontrada para '${key}' no idioma '${lang}'`);
         }
     });
-
-    // Salva a preferência localmente
-    localStorage.setItem('userLanguage', lang);
 }
 
-// Inicializa o idioma como português ou a preferência salva localmente (se existir) 
+// Inicializa o idioma
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('userLanguage') || 'pt';
-    setLanguage(savedLanguage);
+    setLanguage('pt');
 });

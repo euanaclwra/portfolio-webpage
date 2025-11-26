@@ -6,11 +6,9 @@
    "main_title": "I'm Ana, a Full Stack Developer",
    "github_button": "View GitHub",
    "about_title": "About Me",
-   "about_text": [
-    "I’m a full-stack developer passionate about creating solutions that combine design and performance. With over four years of experience on diverse projects, I work on both web and desktop applications, mastering technologies such as HTML, CSS, JavaScript, Bootstrap, MySQL, and Delphi, particularly in ERP systems.",
-    "Furthermore, I am also a big enthusiast of information security, always seeking to combine performance with the secure development of my applications.",
-    "Currently, I’m pursuing a degree in Systems Analysis and Development and always seeking continuous learning, exploring new tools and approaches to deliver even better experiences."
-   ],
+   "about_text_p1": "I’m a full-stack developer passionate about creating solutions that combine design and performance. With over four years of experience on diverse projects, I work on both web and desktop applications, mastering technologies such as HTML, CSS, JavaScript, Bootstrap, MySQL, and Delphi, particularly in ERP systems.",
+   "about_text_p2": "Furthermore, I am also a big enthusiast of information security, always seeking to combine performance with the secure development of my applications.",
+   "about_text_p3": "Currently, I’m pursuing a degree in Systems Analysis and Development and always seeking continuous learning, exploring new tools and approaches to deliver even better experiences.",
    "age_label": "Age:",
    "age_content": "21",
    "location_label": "Location:",

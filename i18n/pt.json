@@ -6,14 +6,12 @@
    "main_title": "Sou a Ana, uma Desenvolvedora Full Stack",
    "github_button": "Ver GitHub",
    "about_title": "Sobre Mim",
-   "about_text": [
-    "Sou uma desenvolvedora full-stack apaixonada em criar soluções que combinam design e performance. Com mais de quatro anos de experiência em diversos projetos, trabalho tanto em aplicações web quanto desktop, masterizando tecnologias como HTML, CSS, JavaScript, Bootstrap, MySQL e Delphi, especialmente em sistemas de gestão de empresas.",
-    "Além disso, também sou uma grande entusiasta da segurança da informação, buscando sempre combinar performance com desenvolvimento seguro nas minhas aplicações.",
-    "Atualmente, sou graduanda em Análise e Desenvolvimento de Sistemas, procurando por aprendizado contínuo, explorando novas ferramentas e técnicas para entregar experiências ainda melhores."
-   ],
+   "about_text_p1": "Sou uma desenvolvedora full-stack apaixonada em criar soluções que combinam design e performance. Com mais de quatro anos de experiência em diversos projetos, trabalho tanto em aplicações web quanto desktop, masterizando tecnologias como HTML, CSS, JavaScript, Bootstrap, MySQL e Delphi, especialmente em sistemas de gestão de empresas.",
+   "about_text_p2": "Além disso, também sou uma grande entusiasta da segurança da informação, buscando sempre combinar performance com desenvolvimento seguro nas minhas aplicações.",
+   "about_text_p3": "Atualmente, sou graduanda em Análise e Desenvolvimento de Sistemas, procurando por aprendizado contínuo, explorando novas ferramentas e técnicas para entregar experiências ainda melhores.",
    "age_label": "Idade:",
    "age_content": "21",
-   "location_label": "Localização:",
+   "location_label": "Local:",
    "location_content": "São Paulo, Brasil",
    "color_label": "Cor:",
    "color_content": "Vermelho",
