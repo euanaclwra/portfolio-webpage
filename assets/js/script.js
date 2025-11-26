@@ -19,7 +19,8 @@ function resizeScrollBar() {
   // Calcula a altura disponível da janela
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   // Calcula o progresso do scroll em porcentagem
-  const progress = docHeight > 0 ? (scrollTop / docHeight) : 0; 
+  let progress = scrollTop / docHeight;
+  progress = progress * 0.98 
 
   // Aumenta o tamanho conforme o progresso
   scroll.style.transform = `scaleY(${progress})`;

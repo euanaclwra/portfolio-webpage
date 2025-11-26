@@ -51,7 +51,7 @@
     </header>
 
     <main>
-        <section class="hero monospaced" id="hero">
+        <section class="hero monospaced flex-container" id="hero">
             <article class="hero-child">
                 <h1>
                     Hello, World!                  
@@ -63,34 +63,31 @@
             </article>         
         </section>
 
-        <section class="about" id="about">
+        <section class="about flex-container" id="about">
             <h2 class="section-title gradient-title" data-i18n="about_title"></h2>
 
             <article class="flex-container">
                 <article class="about-child">
-                    <p data-i18n="about_text_p1"></p> 
+                    <p class="about_text" data-i18n="about_text"></p>                  
+                </article>
+                <article class="about-child">
+                    <article class="education-frame">
+                        <h4 data-i18n="education1_title"></h4>
+                        <p class="font-small font-gray" data-i18n="education1_institution"></p>
+                        <div class="flex-container">
+                            <p class="font-tiny font-gray" data-i18n="education1_period"></p>
+                            <p class="font-tiny font-gray" data-i18n="education1_location"></p>
+                        </div>
+                    </article>
                     <br>
-                    <p data-i18n="about_text_p2"></p>
-                    <br>
-                    <p data-i18n="about_text_p3"></p>                     
-                    <br>
-
-                    <div class="grid-container">
-                        <div class="text-bold" data-i18n="age_label"></div>
-                        <div data-i18n="age_content"></div>
-                        <div class="text-bold" data-i18n="location_label"></div>
-                        <div data-i18n="location_content"></div>
-                        <div class="text-bold" data-i18n="color_label"></div>
-                        <div data-i18n="color_content"></div>
-                        <div class="text-bold" data-i18n="superhero_label"></div>
-                        <div data-i18n="superhero_content"></div>
-                        <div class="text-bold" data-i18n="movie_label"></div>
-                        <div data-i18n="movie_content"></div>
-                        <div class="text-bold" data-i18n="tvshow_label"></div>
-                        <div data-i18n="tvshow_content"></div>
-                        <div class="text-bold" data-i18n="book_label"></div>
-                        <div data-i18n="book_content"></div>
-                    </div>
+                    <article class="education-frame">
+                        <h4 data-i18n="education2_title"></h4>
+                        <p class="font-small font-gray" data-i18n="education2_institution"></p>
+                        <div class="flex-container">
+                            <p class="font-tiny font-gray" data-i18n="education2_period"></p>
+                            <p class="font-tiny font-gray" data-i18n="education2_location"></p>
+                        </div>
+                    </article>
                 </article>
             </article>
         </section>
@@ -98,32 +95,37 @@
         <section class="skills" id="skills">
             <h2 class="section-title" data-i18n="skills_title"></h2>
 
-            <article class="flex-container">
+            <article class="grid-container">
                 <div class="skill-item">
-                    <img src="/assets/img/html-5.png" alt="HTML5 Icon">
-                    <h3 data-i18n="skill1_title"></h3>
-                    <p data-i18n="skill1_text"></p>
-                </div>                    
+                    <img src="/assets/img/html.svg" alt="HTML 5 Icon"> HTML
+                </div>     
                 <div class="skill-item">
-                    <img src="/assets/img/js.png" alt="JavaScript Icon">
-                    <h3 data-i18n="skill2_title"></h3>
-                    <p data-i18n="skill2_text"></p>
-                </div>
-                <div class="skill-item">
-                    <img src="/assets/img/php.png" alt="PHP Icon">
-                    <h3 data-i18n="skill3_title"></h3>
-                    <p data-i18n="skill3_text"></p>
+                    <img src="/assets/img/css.svg" alt="CSS 3 Icon"> CSS
                 </div> 
                 <div class="skill-item">
-                    <img src="/assets/img/database.png" alt="JavaScript Icon">
-                    <h3 data-i18n="skill4_title"></h3>
-                    <p data-i18n="skill4_text"></p>
-                </div>
+                    <img src="/assets/img/bootstrap.svg" alt="Bootstrap Icon"> Bootstrap
+                </div>      
                 <div class="skill-item">
-                    <img src="/assets/img/delphi.png" alt="JavaScript Icon">
-                    <h3 data-i18n="skill5_title"></h3>
-                    <p data-i18n="skill5_text"></p>
-                </div>
+                    <img src="/assets/img/javascript.svg" alt="JavaScript Icon"> JavaScript
+                </div> 
+                <div class="skill-item">
+                    <img src="/assets/img/php.svg" alt="PHP Icon"> PHP
+                </div>        
+                <div class="skill-item">
+                    <img src="/assets/img/git.svg" alt="Git Icon"> Git
+                </div>   
+                <div class="skill-item">
+                    <img src="/assets/img/aws.svg" alt="AWS Icon"> AWS
+                </div>  
+                <div class="skill-item">
+                    <img src="/assets/img/mysql.svg" alt="MySQL Icon"> MySQL
+                </div> 
+                <div class="skill-item">
+                    <img src="/assets/img/delphi.svg" alt="Delphi Icon"> Delphi
+                </div> 
+                <div class="skill-item">
+                    <img src="/assets/img/firemonkey.svg" alt="FireMonkey Icon"> FireMonkey
+                </div> 
             </article>
         </section>
 

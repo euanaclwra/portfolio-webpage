@@ -20,7 +20,12 @@ a {
 
 body {
     font-family: "Montserrat";
-    color: #2b2b2b;         
+    color: #2b2b2b;             
+}
+
+section {
+  flex-direction: column;
+  justify-content: center;
 }
 
 ::-webkit-scrollbar {
@@ -57,6 +62,18 @@ h1 {
 
 .text-bold {
   font-weight: bold;
+}
+
+.font-small {
+  font-size: 0.85rem;
+}
+
+.font-tiny {
+  font-size: 0.75rem
+}
+
+.font-gray {
+  color: #b5b5b5;
 }
 
 #navbar {
@@ -118,6 +135,11 @@ h1 {
   text-align: center;
   color: var(--pink);
   white-space: nowrap; 
+  transition: all 0.2s ease;
+}
+
+.toggle-item:hover {
+  background-color: #ffcff1;
 }
 
 .toggle-item.active {
@@ -185,7 +207,6 @@ h2 {
 }
 
 .hero {
-  display: flex;
   justify-content: center;
   align-items: center;  
 }
@@ -238,7 +259,7 @@ h2 {
 }
 
 .about {
-  background: #ffffff;
+  align-content: center;
 }
 
 .flex-container {
@@ -247,72 +268,76 @@ h2 {
 
 .about .flex-container {  
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .about-child {
-  flex: 0 0 50%;
+  flex: 1;
 }
 
-.about-image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+.about_text {
+  border-left: solid var(--pink) 2px;
+  padding-left: 0.5rem;
 }
 
-.about-image img {
-  width: 60vh;
+.about h4 {
+  font-weight: normal;
+  color: var(--pink);
 }
 
-.about-table {
-  border: solid #40106a 1px;
-  padding: 0.7rem;
-  width: auto;
-  font-size: 0.9rem;
+.education-frame {
+  border: solid #f2f2f2 1px;
+  padding: 1rem;
+  transition: all ease 0.3s;
 }
 
-.about .grid-container {  
-  border: solid var(--pink) 1px;
-  font-size: 0.9rem; 
-  display: grid;  
-  grid-gap: 0.3rem;
-  padding: 0.7rem;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: repeat(7, 1fr);
+.education-frame:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 33px 1px rgba(200, 46, 157, 0.2);
 }
 
-.image-container {
-  background: linear-gradient(228deg,rgba(201, 47, 156, 1) 0%, rgba(93, 0, 113, 1) 100%);
-  border-radius: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  width: fit-content;
+.education-frame .flex-container {
+  justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
-.skills .flex-container {
-  gap: 2rem;
-  padding-top: 3rem;
+.skills {
+  align-content: center;
+}
+
+.skills .grid-container {
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;  
+  margin: 0 auto;
 }
 
 .skill-item {
-  border: solid rgba(162, 31, 171, 0.3) 1px;
-  border-radius: 0.5rem; 
-  width: 25%; 
+  border: solid #f2f2f2 1px;
+  border-radius: 50px;
   height: auto;
-  padding: 2.5rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: all ease 0.3s;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 33px 1px rgba(200, 46, 157, 0.2);
 }
 
 .skill-item img {
-  width: 25%;
+  width: 20%;
   max-width: 200px;
   height: auto;
-}
-
-.skill-item h3 {
-  margin: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.2rem;
 }
 
 .contact {
@@ -365,7 +390,7 @@ line {
 
 @keyframes blink-caret {
   from, to {border-color: transparent}
-  50% {border-color: #C82E9D;}
+  50% {border-color: var(--pink);}
 }
 
 @keyframes gradient-moving {
@@ -392,14 +417,6 @@ line {
     flex-direction: column;
   }
 
-  .hero-child img {
-    opacity: 0;
-  }
-
-  .skill-item {
-    width: auto;
-  }
-
   /* Menu Hambúrguer */
   .burger-menu-btn {
     display: block;
@@ -417,7 +434,7 @@ line {
 
   #burger-icon.active .line1 {
     transform: translateY(10px) rotate(45deg);
-    stroke: #C82E9D;
+    stroke: var(--pink);
   }
 
   #burger-icon.active .line2 {
@@ -426,7 +443,7 @@ line {
 
   #burger-icon.active .line3 {
     transform: translateY(-10px) rotate(-45deg);
-    stroke: #C82E9D;
+    stroke: var(--pink);
   }
 
   .main-menu {
@@ -450,7 +467,7 @@ line {
   }
 
   .menu-item {
-    color: #C82E9D;
+    color: var(--pink);
   }
 
   .menu-item:hover::after {
