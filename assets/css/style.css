@@ -169,6 +169,7 @@ h2 {
 
 .hero-child h2 {
   background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
+  max
 }
 
 .github-btn {
@@ -255,7 +256,7 @@ h2 {
 .skill-item {
   border: solid rgba(162, 31, 171, 0.3) 1px;
   border-radius: 0.5rem; 
-  width: auto; 
+  width: 25%; 
   height: auto;
   padding: 2.5rem;
   padding-top: 5rem;
@@ -334,6 +335,10 @@ line {
 
   .hero-child img {
     opacity: 0;
+  }
+
+  .skill-item {
+    width: auto;
   }
 
   /* Menu Hambúrguer */
