@@ -15,6 +15,10 @@ body {
     background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
 }
 
+header {
+  justify-content: center;
+}
+
 h1 {
   font-size: 0.7rem;
   display: inline-block;  
@@ -32,12 +36,13 @@ h1 {
 }
 
 #navbar {
-  width: 100%;
+  width: 70%;
   position: fixed;
   transform: translateY(-100%);
   transition: transform 0.2s;
   background-color: rgba(0, 0, 33, 0.2);
   backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 #navbar.active {
@@ -63,6 +68,7 @@ h1 {
   position: relative;
   display: flex;
   width: 10rem;
+  margin-right: auto;
 }
 
 .toggle-btn::before {
