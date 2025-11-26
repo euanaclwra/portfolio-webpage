@@ -1,0 +1,2 @@
+const translations = {};
+const url = "";
