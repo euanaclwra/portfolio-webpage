@@ -11,17 +11,20 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+}  
 
 a {
   color: #2b2b2b;
   text-decoration: none;
 }
-}
 
 body {
     font-family: "Montserrat";
-    color: #2b2b2b;    
-    background: #FFFFFF;
+    color: #2b2b2b;         
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 header {
@@ -39,6 +42,15 @@ h1 {
     typing 2.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }  
+
+.scroll {
+  width: 5px;
+  height: 100px;
+  margin: 5px;
+  background-color: var(--pink);
+  position: absolute;
+  right: 0;
+}
 
 .text-bold {
   font-weight: bold;
@@ -72,7 +84,6 @@ h1 {
   gap: 0.3rem;
   padding: 0.3rem;
   margin: 0.5rem;
-  border-radius: 7px;
   border: solid var(--pink) 2px;
   position: relative;
   display: flex;
@@ -88,8 +99,7 @@ h1 {
   width: calc(50% - 0.3rem);
   height: calc(100% - 0.6rem);
   background: var(--pink);
-  border-radius: 3px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   z-index: 0;
 }
 
@@ -109,7 +119,6 @@ h1 {
 
 .toggle-item.active {
   background-color: var(--pink);
-  border-radius: 3px;
   color: white;
 }
 
@@ -122,6 +131,7 @@ main section {
 h2 {
   font-size: 3rem;
   margin-bottom: 3rem;
+  font-family: monospace;
 }
 
 .section-title {
@@ -225,7 +235,7 @@ h2 {
 }
 
 .about {
-  background: #02022B;
+  background: #ffffff;
 }
 
 .flex-container {
@@ -259,8 +269,7 @@ h2 {
 }
 
 .about .grid-container {  
-  border: solid #40106a 1px;
-  border-radius: 0.5rem;
+  border: solid var(--pink) 1px;
   font-size: 0.9rem; 
   display: grid;  
   grid-gap: 0.3rem;
