@@ -225,7 +225,9 @@ h2 {
 }
 
 .hero-child h2 {
-  color: #551378;
+  color: #551378; 
+  opacity: 0;
+  animation: fade 1s ease 2.7s 1 forwards;
 }
 
 .github-btn {
@@ -235,6 +237,8 @@ h2 {
   display: inline-flex;
   border: solid var(--pink) 2px;  
   cursor: pointer;
+  opacity: 0;;
+  animation: fade 1s ease 4s forwards;
 }
 
 .github-btn a {
@@ -383,6 +387,11 @@ line {
 }
 
 /* Animações */
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 @keyframes typing {
   from {width: 0}
   to {width: 14ch}
