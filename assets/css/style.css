@@ -60,6 +60,28 @@ h1 {
   background-color: var(--pink);
 }
 
+.doodle-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+}
+
+.doodle-container rect {
+  stroke: var(--pink);
+  stroke-width: 1px;
+  fill: none;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: spin 2s ease-in-out infinite;
+}
+
+.doodle-container line {
+  stroke: var(--pink);
+  stroke-width: 1px;
+  animation: line-grow 2s ease-in-out alternate infinite;
+}
+
 .text-bold {
   font-weight: bold;
 }
@@ -387,6 +409,18 @@ line {
 }
 
 /* Animações */
+@keyframes spin {
+  0% {transform: rotate(0deg)}
+  35% {transform: rotate(45deg)}
+  65% {transform: rotate(135deg)}
+  100% {transform: rotate(180deg)}
+}
+
+@keyframes line-grow {
+  from {transform: scaleY(1)}
+  to {transform: scaleY(2)}
+}
+
 @keyframes fade {
   from {opacity: 0;}
   to {opacity: 1;}
