@@ -60,50 +60,6 @@ h1 {
   background-color: var(--pink);
 }
 
-.doodle-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100px;
-}
-
-.doodle-container rect {
-  stroke: var(--pink);
-  stroke-width: 1px;
-  fill: none;
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: spin 3s ease-in-out infinite;
-}
-
-.doodle-container line {
-  stroke: var(--pink);
-  stroke-width: 1px;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 300;
-  animation: line-grow 2.5s ease-in-out alternate infinite;
-}
-
-.box {
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-}
-
-.box svg {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.box svg line {
-  stroke: var(--pink);
-  stroke-width: 1px; 
-  opacity: 0; 
-  animation: line-grow 0.7s ease 2.8s forwards; 
-}
-
 .text-bold {
   font-weight: bold;
 }
@@ -218,13 +174,14 @@ h2 {
   gap: 2rem;
   justify-content: center;
   padding-top: 1.3rem;
+  scroll-target-group: auto;
 }
 
 .menu-item {
   text-transform: uppercase; 
 }
 
-.menu-item.active::after {
+.menu-item.active::after, .menu-item:target-current::after {
   content: '';
   width: 100%;
   height: 1px;

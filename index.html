@@ -14,14 +14,6 @@
 </head>
 <body>
     <div class="scroll" id="scroll"></div>
-    <g class="doodle-container">
-        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="15" height="15" x="10.5" y="10.5"/>
-        </svg>
-        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="15" height="15" x="10.5" y="10.5"/>
-        </svg>       
-    </g>
 
     <header class="flex-container">
         <div class="toggle-btn">
@@ -36,16 +28,16 @@
         <nav id="navbar">
             <ul class="main-menu flex-container" id="main-menu">
                 <li>
-                    <a href="#hero" class="menu-item active" data-i18n="nav_home" onclick="activateLink(this)"></a>                                        
+                    <a href="#hero" id="nav_home" class="menu-item" data-i18n="nav_home" onclick="activateLink(this)"></a>                                        
                 </li>
                 <li>
-                    <a href="#about" class="menu-item" data-i18n="nav_about" onclick="activateLink(this)"></a>
+                    <a href="#about" id="nav_about" class="menu-item" data-i18n="nav_about" onclick="activateLink(this)"></a>
                 </li>
                 <li>
-                    <a href="#skills" class="menu-item" data-i18n="nav_skills" onclick="activateLink(this)"></a>
+                    <a href="#skills" id="nav_skills" class="menu-item" data-i18n="nav_skills" onclick="activateLink(this)"></a>
                 </li>
                 <li>
-                    <a href="#contact" class="menu-item" data-i18n="nav_contact" onclick="activateLink(this)"></a>
+                    <a href="#contact" id="nav_contact" class="menu-item" data-i18n="nav_contact" onclick="activateLink(this)"></a>
                 </li>
             </ul>
         </nav>
@@ -60,16 +52,10 @@
     </header>
 
     <main>
-        <section class="hero monospaced flex-container" id="hero">
-            <article class="hero-child">
-                <div class="box">                    
-                    <h1>Hello, World!</h1>
-                    <h2 class="gradient-title" data-i18n="main_title"></h2>
-
-                    <svg xmlns="http://www.w3.org/2000/svg">            
-                        <line x1="0" y1="100%" x2="100%" y2="100%"/>            
-                    </svg>                      
-                </div>              
+        <section class="hero monospaced flex-container" id="hero" data-link="nav-home">
+            <article class="hero-child">                   
+                <h1>Hello, World!</h1>
+                <h2 class="gradient-title" data-i18n="main_title"></h2>                              
 
                 <div class="github-btn">
                     <a href="https://github.com/euanaclwra" target="_blank" data-i18n="github_button"></a>                     
@@ -77,7 +63,7 @@
             </article>         
         </section>
 
-        <section class="about flex-container" id="about">
+        <section class="about flex-container" id="about" data-link="nav_about">
             <h2 class="section-title gradient-title" data-i18n="about_title"></h2>
 
             <article class="flex-container">
@@ -106,7 +92,7 @@
             </article>
         </section>
 
-        <section class="skills" id="skills">
+        <section class="skills" id="skills" data-link="nav_skills">
             <h2 class="section-title" data-i18n="skills_title"></h2>
 
             <article class="grid-container">
@@ -143,7 +129,7 @@
             </article>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" data-link="nav_contact">
             <h2 class="section-title gradient-title" data-i18n="contact_title"></h2>
 
             <article class="flex-container contact-box">
