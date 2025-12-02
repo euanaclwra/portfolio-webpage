@@ -5,27 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/script.js" defer></script>
-    <script src="/i18n/i18n.js" defer></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <script src="assets/js/script.js" defer></script>
+    <script src="i18n/i18n.js" defer></script>
 
     <title>Ana Clara | Developer</title>
 </head>
 <body>
     <div class="scroll" id="scroll"></div>
-    <div class="doodle-container">
+    <g class="doodle-container">
         <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
             <rect width="15" height="15" x="10.5" y="10.5"/>
         </svg>
-        <svg height="600" width="300" xmlns="http://www.w3.org/2000/svg">
-            <g class="grow">
-                <line x1="17.5" y1="0" x2="17.5" y2="600"/>
-            </g>            
-        </svg> 
         <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
             <rect width="15" height="15" x="10.5" y="10.5"/>
         </svg>       
-    </div>
+    </g>
 
     <header class="flex-container">
         <div class="toggle-btn">
@@ -66,10 +62,15 @@
     <main>
         <section class="hero monospaced flex-container" id="hero">
             <article class="hero-child">
-                <h1>
-                    Hello, World!                  
-                </h1>
-                <h2 class="gradient-title" data-i18n="main_title"></h2>
+                <div class="box">                    
+                    <h1>Hello, World!</h1>
+                    <h2 class="gradient-title" data-i18n="main_title"></h2>
+
+                    <svg xmlns="http://www.w3.org/2000/svg">            
+                        <line x1="0" y1="100%" x2="100%" y2="100%"/>            
+                    </svg>                      
+                </div>              
+
                 <div class="github-btn">
                     <a href="https://github.com/euanaclwra" target="_blank" data-i18n="github_button"></a>                     
                 </div>                

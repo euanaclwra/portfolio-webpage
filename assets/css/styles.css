@@ -84,6 +84,26 @@ h1 {
   animation: line-grow 2.5s ease-in-out alternate infinite;
 }
 
+.box {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+.box svg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.box svg line {
+  stroke: var(--pink);
+  stroke-width: 1px; 
+  opacity: 0; 
+  animation: line-grow 0.7s ease 2.8s forwards; 
+}
+
 .text-bold {
   font-weight: bold;
 }
@@ -252,6 +272,7 @@ h2 {
   color: #551378; 
   opacity: 0;
   animation: fade 1s ease 2.7s 1 forwards;
+  padding-bottom: 1rem;
 }
 
 .github-btn {
@@ -408,53 +429,6 @@ h2 {
 line {
   stroke: white;
   stroke-width: 1px;
-}
-
-/* Animações */
-
-@keyframes spin {
-  0% {transform: rotate(0deg)}
-  25% {transform: rotate(45deg)}
-  50% {transform: rotate(90deg)}
-  75% {transform: rotate(135deg)}
-  100% {transform: rotate(180deg)}
-}
-
-@keyframes line-grow {
-   to {stroke-dashoffset: -300;}
-}
-
-@keyframes fade {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes typing {
-  from {width: 0}
-  to {width: 14ch}
-}
-
-@keyframes blink-caret {
-  from, to {border-color: transparent}
-  50% {border-color: var(--pink);}
-}
-
-@keyframes gradient-moving {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 50% 100%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* Responsividade */
