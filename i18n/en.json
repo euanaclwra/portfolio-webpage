@@ -1,11 +1,11 @@
 {
    "nav_home": "home",
-   "nav_about": "about",
+   "nav_about": "projects",
    "nav_skills": "skills",
    "nav_contact": "contact",
    "main_title": "I'm Ana, a Full Stack Developer",
    "github_button": "View GitHub",
-   "about_title": "About Me",
+   "about_title": "Projects",
    "about_text": "I’m a full-stack developer passionate about creating solutions that combine design and performance. With over four years of experience on diverse projects, I work on web, mobile and desktop applications. Furthermore, I am also a big enthusiast of information security, always seeking to combine performance with the secure development of my applications.",
    "age_label": "Age:",
    "age_content": "21",

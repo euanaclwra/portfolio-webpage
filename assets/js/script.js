@@ -1,6 +1,9 @@
-const menu = document.getElementById("main-menu");
+// ======== CONSTANTES GLOBAIS ======== //
 
-// ======== EVENT LISTENERS ======== //
+const menu = document.getElementById("main-menu");
+const sections = document.querySelectorAll("section");
+
+// ========== EVENT LISTENERS ========== //
 
 document.querySelectorAll(".toggle-item").forEach(item => {
     item.addEventListener("click", function () {
@@ -10,9 +13,10 @@ document.querySelectorAll(".toggle-item").forEach(item => {
 
 document.getElementById("burger-menu-btn").addEventListener("click", showMenu);
 
-// Mostra a barra de navegação ao rolar a tela
 window.onscroll = function() {
+    // Mostra a barra de navegação
     showNavBar()
+    // Redimensiona a barra de rolagem
     resizeScrollBar();
 };
 
@@ -20,6 +24,8 @@ window.onscroll = function() {
 window.onload = function () {
     setLinkAnimation()
 };
+
+// =============== GERAL =============== //
 
 function resizeScrollBar() {
   const scroll = document.getElementById("scroll");
@@ -86,7 +92,9 @@ function slideToggle(option) {
     container.classList.remove("right");
   }
 }
-// ======== MOBILE ======== //
+
+// ============== MOBILE ============== //
+
 function showMenu() {
     // Ativa o menu e troca o ícone
     menu.classList.toggle("collapsed");

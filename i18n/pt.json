@@ -1,11 +1,11 @@
 {
    "nav_home": "início",
-   "nav_about": "sobre",
+   "nav_about": "projetos",
    "nav_skills": "skills",
    "nav_contact": "contato",
    "main_title": "Sou a Ana, Desenvolvedora Full Stack",
    "github_button": "Ver GitHub",
-   "about_title": "Sobre Mim",
+   "about_title": "Projetos",
    "about_text": "Sou uma desenvolvedora full-stack apaixonada por criar soluções que combinam design e performance. Com mais de quatro anos de experiência em diversos projetos, trabalho com aplicações web, mobile e desktop. Além disso, sou uma grande entusiasta da segurança da informação, e sempre procuro unir performance com o desenvolvimento seguro das minhas aplicações.",
    "skills_title": "Tech Stack",
    "contact_title": "Fale Comigo",

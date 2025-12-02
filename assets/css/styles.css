@@ -26,6 +26,7 @@ body {
 section {
   flex-direction: column;
   justify-content: center;
+  align-content: center;
 }
 
 ::-webkit-scrollbar {
@@ -310,40 +311,34 @@ h2 {
   margin-top: 1.5rem;
 }
 
-.skills {
-  align-content: center;
-}
-
-.skills .grid-container {
-  display: grid;
-  width: 50%;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;  
-  margin: 0 auto;
+.skills .flex-container {
+  gap: 1rem;
+  align-items: center;
 }
 
 .skill-item {
-  border: solid #f2f2f2 1px;
-  border-radius: 50px;
   height: auto;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  transition: all ease 0.3s;
+  margin: 3rem;
 }
 
-.skill-item:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 33px 1px rgba(200, 46, 157, 0.2);
+.skill-item p {
+  font-size: 0.9em;
 }
 
-.skill-item img {
-  width: 20%;
-  max-width: 200px;
-  height: auto;
-  margin-right: 0.5rem;
-  margin-left: 0.2rem;
+.skill-item h4 {
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.divider {
+  border: solid #d9d9d9 1px;
+  width: 1px;
+  height: 250px;
+}
+
+.icon {
+  opacity: 0.2;
 }
 
 .contact {
@@ -375,23 +370,15 @@ h2 {
   background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
 }
 
-.divider {
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-line {
-  stroke: white;
-  stroke-width: 1px;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {  
   .flex-container {
     flex-direction: column;
+  }
+
+  .divider {
+    width: 250px;
+    height: 1px;
   }
 
   /* Menu Hambúrguer */
