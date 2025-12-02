@@ -17,10 +17,10 @@
 
     <header class="flex-container">
         <div class="toggle-btn">
-            <div class="toggle-item active" onclick="slideToggle(this), setLanguage('pt')">
+            <div class="toggle-item active" data-i18n="pt">
                 pt-br
             </div>
-            <div class="toggle-item" onclick="slideToggle(this), setLanguage('en')">
+            <div class="toggle-item" data-i18n="en">
                 en-us
             </div>
         </div>
@@ -28,21 +28,21 @@
         <nav id="navbar">
             <ul class="main-menu flex-container" id="main-menu">
                 <li>
-                    <a href="#hero" id="nav_home" class="menu-item" data-i18n="nav_home" onclick="activateLink(this)"></a>                                        
+                    <a href="#hero" id="nav_home" class="menu-item" data-i18n="nav_home"></a>                                        
                 </li>
                 <li>
-                    <a href="#about" id="nav_about" class="menu-item" data-i18n="nav_about" onclick="activateLink(this)"></a>
+                    <a href="#about" id="nav_about" class="menu-item" data-i18n="nav_about"></a>
                 </li>
                 <li>
-                    <a href="#skills" id="nav_skills" class="menu-item" data-i18n="nav_skills" onclick="activateLink(this)"></a>
+                    <a href="#skills" id="nav_skills" class="menu-item" data-i18n="nav_skills"></a>
                 </li>
                 <li>
-                    <a href="#contact" id="nav_contact" class="menu-item" data-i18n="nav_contact" onclick="activateLink(this)"></a>
+                    <a href="#contact" id="nav_contact" class="menu-item" data-i18n="nav_contact"></a>
                 </li>
             </ul>
         </nav>
 
-        <button class="burger-menu-btn" id="burger-menu-btn" onclick="showMenu()">
+        <button class="burger-menu-btn" id="burger-menu-btn">
             <svg height="40" width="40" xmlns="http://www.w3.org/2000/svg" id="burger-icon">
                 <line x1="0" y1="10" x2="40" y2="10" class="line1"/>
                 <line x1="0" y1="20" x2="40" y2="20" class="line2"/>

@@ -1,5 +1,13 @@
 const translations = {};
 
+// Aciona o evento de clique no botão de idioma
+document.querySelectorAll(".toggle-item").forEach(item => {
+    item.addEventListener("click", function () {
+        const lang = item.getAttribute('data-i18n');
+        setLanguage(lang);
+    });
+});
+
 // Carrega o arquivo JSON de um idioma
 async function loadLanguage(lang) {
     // Verifica se o idioma já foi carregado anteriormente

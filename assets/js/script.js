@@ -1,10 +1,14 @@
 const menu = document.getElementById("main-menu");
-const menuItems = document.querySelectorAll(".menu-item");
-const sections = document.querySelectorAll("section");
 
-menuItems.forEach(link => {
-    link.addEventListener("click", activateLink);
+// ======== EVENT LISTENERS ======== //
+
+document.querySelectorAll(".toggle-item").forEach(item => {
+    item.addEventListener("click", function () {
+        slideToggle(this);
+    });
 });
+
+document.getElementById("burger-menu-btn").addEventListener("click", showMenu);
 
 // Mostra a barra de navegação ao rolar a tela
 window.onscroll = function() {
@@ -82,22 +86,6 @@ function slideToggle(option) {
     container.classList.remove("right");
   }
 }
-
-function getActiveSection(section) {
-    // Obtém o item do menu vinculado a section
-    const link = section.dataset.link;
-    const menuItem = document.getElementById(link);
-    // Chama a function de ativação
-    activateLink(menuItem);
-}
-
-function activateLink() {
-    // Desativa os demais links
-    menuItems.forEach(el => el.classList.remove("active"));
-    // Ativa o link selecionado
-    this.classList.add("active");   
-}
-
 // ======== MOBILE ======== //
 function showMenu() {
     // Ativa o menu e troca o ícone
