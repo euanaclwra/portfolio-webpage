@@ -1,0 +1,67 @@
+@media (max-width: 768px) {  
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .divider {
+    width: 250px;
+    height: 1px;
+  }
+
+  /* Menu Hambúrguer */
+  .burger-menu-btn {
+    display: block;
+    align-self: flex-end;
+    top: 10px;
+    right: 15px;
+    position: absolute;
+  }
+
+  line {
+    transition: all 0.3s ease-in-out;
+    transform-box: fill-box;
+    transform-origin: center;    
+  }
+
+  #burger-icon.active .line1 {
+    transform: translateY(10px) rotate(45deg);
+    stroke: var(--pink);
+  }
+
+  #burger-icon.active .line2 {
+    opacity: 0;
+  }
+
+  #burger-icon.active .line3 {
+    transform: translateY(-10px) rotate(-45deg);
+    stroke: var(--pink);
+  }
+
+  .main-menu {
+    position: absolute;
+    top: -1000px;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f2f2f2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main-menu.collapsed {
+    top: 0;
+  }
+
+  .main-menu li {
+    border-bottom: solid gainsboro 1px;
+    width: 90%;
+    align-self: center;
+  }
+
+  .menu-item {
+    color: var(--pink);
+  }
+
+  .menu-item:hover::after {
+  transform: scaleX(0)
+  }
+}

@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+  font-family: "Montserrat";
 }  
 
 a {
@@ -19,7 +20,6 @@ a {
 }
 
 body {
-    font-family: "Montserrat";
     color: #2b2b2b;             
 }
 
@@ -273,6 +273,10 @@ h2 {
   display: flex;
 }
 
+.grid-container {
+  display: grid;
+}
+
 .about .flex-container {  
   justify-content: center;
   margin: 0 auto;
@@ -343,6 +347,26 @@ h2 {
   flex-direction: column;
 }
 
+.skill-item button:hover div {
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+.skill-item button div {
+  width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  gap: 1.5rem;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.skill-item div svg {
+  fill: var(--pink);
+}
+
 .skill-item .arrow {
   stroke: var(--pink);
   scale: 1.3;
@@ -385,73 +409,4 @@ h2 {
   text-decoration: none;
   color: white;  
   background: linear-gradient(90deg, rgba(0, 0, 33, 1) 0%, rgba(9, 9, 71, 1) 35%, rgba(93, 20, 125, 1) 100%);  
-}
-
-/* Responsividade */
-@media (max-width: 768px) {  
-  .flex-container {
-    flex-direction: column;
-  }
-
-  .divider {
-    width: 250px;
-    height: 1px;
-  }
-
-  /* Menu Hambúrguer */
-  .burger-menu-btn {
-    display: block;
-    align-self: flex-end;
-    top: 10px;
-    right: 15px;
-    position: absolute;
-  }
-
-  line {
-    transition: all 0.3s ease-in-out;
-    transform-box: fill-box;
-    transform-origin: center;    
-  }
-
-  #burger-icon.active .line1 {
-    transform: translateY(10px) rotate(45deg);
-    stroke: var(--pink);
-  }
-
-  #burger-icon.active .line2 {
-    opacity: 0;
-  }
-
-  #burger-icon.active .line3 {
-    transform: translateY(-10px) rotate(-45deg);
-    stroke: var(--pink);
-  }
-
-  .main-menu {
-    position: absolute;
-    top: -1000px;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: #f2f2f2;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .main-menu.collapsed {
-    top: 0;
-  }
-
-  .main-menu li {
-    border-bottom: solid gainsboro 1px;
-    width: 90%;
-    align-self: center;
-  }
-
-  .menu-item {
-    color: var(--pink);
-  }
-
-  .menu-item:hover::after {
-  transform: scaleX(0)
-}
 }
