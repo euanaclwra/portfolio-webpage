@@ -3,7 +3,7 @@ const translations = {};
 // Aciona o evento de clique no botão de idioma
 document.querySelectorAll(".toggle-item").forEach(item => {
     item.addEventListener("click", function () {
-        const lang = item.getAttribute('data-i18n');
+        const lang = item.dataset.i18n;
         setLanguage(lang);
     });
 });
@@ -57,5 +57,5 @@ async function setLanguage(lang) {
 
 // Inicializa o idioma como inglês
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('pt');
+    setLanguage('en');
 });

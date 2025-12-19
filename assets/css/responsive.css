@@ -15,17 +15,18 @@
     top: 10px;
     right: 15px;
     position: absolute;
+    z-index: 15;
   }
 
   line {
     transition: all 0.3s ease-in-out;
     transform-box: fill-box;
     transform-origin: center;    
+    stroke: var(--pink);
   }
 
   #burger-icon.active .line1 {
     transform: translateY(10px) rotate(45deg);
-    stroke: var(--pink);
   }
 
   #burger-icon.active .line2 {
@@ -34,7 +35,10 @@
 
   #burger-icon.active .line3 {
     transform: translateY(-10px) rotate(-45deg);
-    stroke: var(--pink);
+  }
+
+  nav {
+    z-index: 10;
   }
 
   .main-menu {
@@ -45,10 +49,11 @@
     background-color: #f2f2f2;
     text-align: center;
     transition: all 0.3s ease-in-out;
+    padding: 0;
   }
 
   .main-menu.collapsed {
-    top: 0;
+    top: -20px;
   }
 
   .main-menu li {
@@ -61,7 +66,7 @@
     color: var(--pink);
   }
 
-  .menu-item:hover::after {
-  transform: scaleX(0)
+  .menu-item.active::after, .menu-item:target-current::after {
+    transform: scaleX(0)
   }
 }
